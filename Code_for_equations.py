@@ -203,11 +203,47 @@ sim=spint.odeint(func=ddSim2,y0=y0,t=times,args=params)
 simDF=pd.DataFrame({"t":times,"Prey":sim[:,0],"Predator":sim[:,1]})
 ggplot(simDF,aes(x="t",y="Prey"))+ylab("")+geom_line()+geom_line(simDF,aes(x="t",y="Predator"),color='red')+theme_classic()
 
-# simulation of equilibrium
-times = np.linspace(0, 50, 501)
-y0 = [25, 5]
-params = (0.5, 0.02, 0.1, 0.2)
-sim=spint.odeint(func=ddSim1,y0=y0,t=times,args=params)
+
+# vary carrying capacity
+
+# carrying capacity of 800
+times = np.linspace(0, 100, 1001)
+y0 = [500, 120]
+params = (0.8, 0.07, 0.05, 5, 400, 0.00125)
+sim=spint.odeint(func=ddSim2,y0=y0,t=times,args=params)
 simDF=pd.DataFrame({"t":times,"Prey":sim[:,0],"Predator":sim[:,1]})
-simDF.Predator.max()
 ggplot(simDF,aes(x="t",y="Prey"))+ylab("")+geom_line()+geom_line(simDF,aes(x="t",y="Predator"),color='red')+theme_classic()
+
+
+# carrying capacity of 1100
+times = np.linspace(0, 100, 1001)
+y0 = [500, 120]
+params = (0.8, 0.07, 0.05, 5, 400, 0.0009090909)
+sim=spint.odeint(func=ddSim2,y0=y0,t=times,args=params)
+simDF=pd.DataFrame({"t":times,"Prey":sim[:,0],"Predator":sim[:,1]})
+ggplot(simDF,aes(x="t",y="Prey"))+ylab("")+geom_line()+geom_line(simDF,aes(x="t",y="Predator"),color='red')+theme_classic()
+
+# carrying capacity of 1400
+times = np.linspace(0, 100, 1001)
+y0 = [500, 120]
+params = (0.8, 0.07, 0.05, 5, 400, 0.0007142857)
+sim=spint.odeint(func=ddSim2,y0=y0,t=times,args=params)
+simDF=pd.DataFrame({"t":times,"Prey":sim[:,0],"Predator":sim[:,1]})
+ggplot(simDF,aes(x="t",y="Prey"))+ylab("")+geom_line()+geom_line(simDF,aes(x="t",y="Predator"),color='red')+theme_classic()
+
+# carrying capacity of 1700
+times = np.linspace(0, 100, 1001)
+y0 = [500, 120]
+params = (0.8, 0.07, 0.05, 5, 400, 0.0005882353)
+sim=spint.odeint(func=ddSim2,y0=y0,t=times,args=params)
+simDF=pd.DataFrame({"t":times,"Prey":sim[:,0],"Predator":sim[:,1]})
+ggplot(simDF,aes(x="t",y="Prey"))+ylab("")+geom_line()+geom_line(simDF,aes(x="t",y="Predator"),color='red')+theme_classic()
+
+# carrying capacity of 2000
+times = np.linspace(0, 100, 1001)
+y0 = [500, 120]
+params = (0.8, 0.07, 0.05, 5, 400, 0.0005000000)
+sim=spint.odeint(func=ddSim2,y0=y0,t=times,args=params)
+simDF=pd.DataFrame({"t":times,"Prey":sim[:,0],"Predator":sim[:,1]})
+ggplot(simDF,aes(x="t",y="Prey"))+ylab("")+geom_line()+geom_line(simDF,aes(x="t",y="Predator"),color='red')+theme_classic()
+
