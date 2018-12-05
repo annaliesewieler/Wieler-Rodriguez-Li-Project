@@ -13,6 +13,7 @@ import scipy
 import scipy.integrate as spint
 from plotnine import *
 
+# Lotka-Volterra Simulation Function
 def ddSim1(y, t0, b, a, e, s):
     H = y[0]
     P = y[1]
@@ -20,6 +21,7 @@ def ddSim1(y, t0, b, a, e, s):
     dPdt = e*a*P*H - s*P
     return [dHdt, dPdt]
 
+# Rosenzweig- MacArthur Model
 def ddSim2(y, t0, b, e, s, w, d, alpha):
     H= y[0]
     P = y[1]
