@@ -1,0 +1,16 @@
+Comments for Peer Review
+
+Your code is very neat and organized, looks great.
+Annotations are good
+
+It might be a good idea to do some explanations for the base case- a general description of what the simulation is doing.
+
+Instead of just stating what a parameter changes, maybe offer a biological explanation of why that might be. Example: Instead of just saying that increasing the birth rate increases predator and prey populations, explain why an increase in birth rate for prey would increase predator (i.e. through more food availability, ability to sustain a greater population, etc.) In short: more interpretation in addition to reporting.
+Especially on Case 4 in Lotka Volterra- there is no interpretation offered.
+Include more of the theory behind the changes in parameters.
+
+Figures look really good. 
+
+Figures look really good and clean.
+
+Where are conceptual models?
